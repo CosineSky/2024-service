@@ -1,0 +1,30 @@
+.reco-message{
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    padding: 20px 15px;
+}
+.el-message__content{
+    font-size: 18px;
+    color: #000000 !important;
+    font-weight: bold;
+}
+.el-message__icon{
+    margin: 5px;
+    font-size: 25px;
+    color: #1ed660 !important;
+}
+.el-popover{
+    border-radius: 12px !important;
+    padding: 0 !important ;
+    border: #1f1f1f solid 1px !important;
+    box-shadow: #1f1f1f 2px 1px !important;
+}
+.el-card{
+    height: 100%;
+    background-color: transparent;
+    border: none;
+}
+.el-card__body{
+    height: 100%;
+    padding: 0;
+}

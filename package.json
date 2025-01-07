@@ -1,0 +1,56 @@
+{
+  "name": "2024-devops-frontend",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
+  },
+  "build": {
+    "appId": "com.example.app",
+    "productName": "MyApp",
+    "files": [
+      "dist/**/*",
+      "main.js"
+    ]
+  },
+  "dependencies": {
+    "@amap/amap-jsapi-loader": "^1.0.1",
+    "@element-plus/icons-vue": "^2.3.1",
+    "axios": "^1.7.7",
+    "colorthief": "^2.4.0",
+    "core-js": "^3.38.1",
+    "element-plus": "^2.8.2",
+    "js-md5": "^0.8.3",
+    "pinia": "^2.2.2",
+    "swiper": "^11.1.14",
+    "tippy.js": "^6.3.7",
+    "uuid": "^11.0.3",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "vue-tippy": "^6.5.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.16",
+    "@babel/plugin-transform-modules-commonjs": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0",
+    "browserify-fs": "^1.0.0",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "less": "^4.2.1",
+    "less-loader": "^12.2.0",
+    "node-polyfill-webpack-plugin": "^4.1.0",
+    "path-browserify": "^1.0.1",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ]
+}
