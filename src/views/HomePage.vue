@@ -423,7 +423,6 @@ function updateCurrentTime(event) {
 		
 		<!-- MAIN & RIGHT CONTENT -->
 		<Header class="header" allow-search></Header>
-		<img class="logo" src="../assets/pictures/logos/logo3.png" alt="">
 		<left-side-bar class="left-side-bar"/>
 		<div class="content" :class="{ 'full-width': !showRightContent }">
 			<div class="main-view" :class="{ 'expanded': !showRightContent }">
@@ -456,7 +455,7 @@ function updateCurrentTime(event) {
 		<footer>
 			<div class="bottom-description bottom-component"
 			     style="display: flex; flex-direction: row; justify-content: center;">
-				<div @click="togglePlayingPage">
+				<div>
 					<img v-if="songs[currentSongIndex] !== undefined"
 					     :src="songs[currentSongIndex].picPath" alt=""
 					     style="
@@ -477,7 +476,7 @@ function updateCurrentTime(event) {
 				<div v-if="songs[currentSongIndex] !== undefined"
 				     style="display: flex; flex-direction: column; justify-content: center;">
 					<p style="font-family: Consolas, serif; color: white; font-size: 16px; text-align: left; margin-left: 5px">
-						{{ songs[currentSongIndex].title }}</p>
+						{{ songs[currentSongIndex].songName }}</p>
 					<p style="font-family: Consolas, serif; color: white; font-size: 16px; text-align: left; margin-left: 5px">
 						{{ songs[currentSongIndex].artist }}</p>
 				</div>

@@ -195,7 +195,6 @@ function handleRegister() {
 		<source src="../assets/videos/3.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
-	<img class="logo" src="../assets/pictures/logos/logo1.png" alt="">
 	<div class="shell">
 		<div v-if="!reset" class="container a-container" id="a-container">
 			<div class="toast-list">

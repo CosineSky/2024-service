@@ -134,8 +134,7 @@ defineProps({
 		     @mouseleave="()=>{hoverOnAlbum=false}"
 		     :style="{ scrollbarWidth : hoverOnAlbum? 'auto':'none'}"
 		>
-			
-			
+			<el-empty/>
 			<div v-if="musicAlbums !== undefined" v-for="album in musicAlbums"
 			     :key="album.id"
 			     @mouseenter="()=>{albumHoveredIndex = album.id}"

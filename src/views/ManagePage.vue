@@ -2,9 +2,10 @@
 import {onMounted, ref} from "vue";
 import {useTheme} from "../store/theme";
 import ImageUploader from "../components/FileUploader.vue";
-import {addNewAudio, deleteAudioById, updateAudioById} from "../api/song";
+import {addNewAudio, deleteAudioById, getCounts, updateAudioById} from "../api/song";
 
 const theme = useTheme()
+const api_counts = ref();
 
 const song_id = ref("");
 const song_title = ref("");
@@ -70,6 +71,14 @@ function handleSubmit() {
 
 onMounted(() => {
 	theme.reset();
+	getCounts({
+		/* Nothing here. */
+	}).then((res) => {
+		console.log(res.data.result)
+		api_counts.value = res.data.result
+	}).catch((err) => {
+		console.log(err)
+	})
 })
 </script>
 
@@ -81,7 +90,13 @@ onMounted(() => {
 	                <div class="user_options-unregistered">
 	                    <h2 class="user_unregistered-title">厌倦了那些老歌？</h2>
 	                    <p class="user_unregistered-text">没关系！作为我们的音乐播放器管理者，您可以随时将全新的歌曲添加到我们的音乐库，打造属于您的专属旋律世界，随时随地与世界分享您的音乐心情。让每一首歌，都成为您灵感的源泉！</p>
-		                <p class="user_unregistered-text">您只需在右侧的表单中填写歌曲的必要信息和文件。</p>
+		                <p class="user_unregistered-text">您只需在右侧的表单中填写歌曲的必要信息和文件。</p><br>
+		                <p style="color: #a0a5a8">API统计</p>
+		                <p style="color: #a0a5a8">uploadAudio / {{api_counts !== undefined ? api_counts.uploadAudio : 0}}</p>
+		                <p style="color: #a0a5a8">getAudioById / {{api_counts !== undefined ? api_counts.getAudioById : 0}}</p>
+		                <p style="color: #a0a5a8">getAudioList / {{api_counts !== undefined ? api_counts.getAudioList : 0}}</p>
+		                <p style="color: #a0a5a8">deleteAudio / {{api_counts !== undefined ? api_counts.deleteAudio : 0}}</p>
+		                <p style="color: #a0a5a8">updateAudio / {{api_counts !== undefined ? api_counts.updateAudio : 0}}</p>
 	                </div>
 	                <div class="user_options-registered">
 	                    <button class="user_registered-login" id="login-button">Login</button>
